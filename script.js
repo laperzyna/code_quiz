@@ -28,7 +28,7 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent = secondsLeft;
 
-    if(secondsLeft === 0) {
+    if(secondsLeft == 0) {
       clearInterval(timerInterval);
       return window.location.assign("lastpage.html");
     }
