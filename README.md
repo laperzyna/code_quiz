@@ -12,3 +12,7 @@ This assignment was super difficult and I struggled with it a lot. You'll probab
 ![game](https://user-images.githubusercontent.com/90733086/172255897-c3b62a16-6048-4db6-b55d-22c171ccbc4c.JPEG)
 
 ![home](https://user-images.githubusercontent.com/90733086/172255908-abc01af8-0ac6-46d9-af90-d27c86011465.JPEG)
+
+## Link
+
+https://laperzyna.github.io/code_quiz/
