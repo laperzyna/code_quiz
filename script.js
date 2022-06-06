@@ -157,3 +157,8 @@ startGame();
 //TODO: fix final score displaying as 0
 finalScore.innerText = mostRecentScore;
 
+
+const highScoresList = document.getElementById("highScoresList");
+const highScores = localStorage.getItem("highScores");
+//display highscore list
+highScoresList.innerHTML = highScores
