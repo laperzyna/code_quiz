@@ -2,13 +2,14 @@
     background-color: #fff4ec;
     font-size: 62.5%;
     --orange: #ff904b;
+    --text: #333;
 }
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text);
 }
 
 h1,
@@ -38,6 +39,7 @@ h2 {
 h3 {
     font-size: 2.8rem;
     font-weight: 500;
+    font-family: monospace;
 }
 
 .container {
@@ -50,6 +52,10 @@ h3 {
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+    background-color: white;
+    border: solid;
+    border-color: var(--text);
+    border-radius: 2%;
 }
 
 .container > * {
@@ -83,7 +89,8 @@ h3 {
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.1rem solid #ff904b;
+    border: 0.1rem solid;
+    border-color:  var(--orange);
     margin-bottom: 1rem;
     text-decoration: none;
     color: var(--orange);
@@ -121,7 +128,7 @@ input {
 }
 
 input::placeholder {
-    color: #aaa;
+    color: var(--text);
 }
 
 .choice-container {
@@ -131,6 +138,7 @@ input::placeholder {
     font-size: 1.8rem;
     border: 0.1rem solid rgb(206, 128, 51, 0.25);
     background-color: white;
+    border-radius: 2%;
 }
 
 .choice-container:hover {
@@ -142,6 +150,7 @@ input::placeholder {
 }
 
 .choice-num {
+    font-family: monospace;
     padding: 1.5rem 2.5rem;
     background-color: #ff904b;
     color: white;
@@ -160,7 +169,6 @@ input::placeholder {
     background-color: #f56876;
 }
 
-/* Heads up display */
 
 #top {
     display: flex;

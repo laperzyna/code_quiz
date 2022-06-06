@@ -3,6 +3,10 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const qCot = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 const timeEl = document.getElementById("time");
+const username = document.getElementById('username');
+const saveScoreBtn = document.getElementById('saveScoreBtn');
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 // variables
 //keep track of the current question
@@ -26,7 +30,7 @@ function setTime() {
 
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
-      // return window.location.assign("lastpage.html");
+      return window.location.assign("lastpage.html");
     }
 
   }, 1000);
@@ -88,10 +92,10 @@ startGame = () => {
 // TODO: need to add last page. This function randomly selects 
 // questions to ask and displays the questions/choices
 newQuestion = () => {
-  // if (quesionsLeft.length === 0 || qCo >= max) {
-  //   //go to the end page
-  //   return window.location.assign("lastpage.html");
-  // }
+  if (quesionsLeft.length === 0 || qCo >= max) {
+    //go to the end page
+    return window.location.assign("lastpage.html");
+  }
   qCo++;
   const questionIndex = Math.floor(Math.random() * quesionsLeft.length);
   //displays questions
@@ -148,3 +152,8 @@ incrementScore = num => {
 };
 //call to start game
 startGame();
+
+//display text for last page
+//TODO: fix final score displaying as 0
+finalScore.innerText = mostRecentScore;
+
